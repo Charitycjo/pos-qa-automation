@@ -1,11 +1,11 @@
-# 🧪 Cypress Automation Framework – Sauce Demo
+#  Cypress Automation Framework – Sauce Demo
 
 This project automates the end-to-end testing of the [Sauce Demo](https://www.saucedemo.com/) e-commerce web application using **Cypress** and the **Page Object Model (POM)** design pattern.  
 It’s designed to validate core user workflows such as login, adding products to cart, and completing checkout.
 
 ---
 
-## 🚀 Tech Stack
+## Tech Stack
 
 - **Language:** JavaScript  
 - **Test Framework:** Cypress  
