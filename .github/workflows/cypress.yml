@@ -1,0 +1,36 @@
+name: Cypress Tests
+
+# triggers: push to main, pull requests to main, and manual run
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch: {}   # allows manual run from Actions UI
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1) checkout the repo
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      # 2) set up Node (use the major version you want)
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # 3) install dependencies
+      - name: Install dependencies
+        run: npm ci
+
+      # 4) run Cypress tests with the official Cypress GitHub Action
+      - name: Run Cypress tests
+        uses: cypress-io/github-action@v6
+        with:
+          browser: chrome
+          # record: false        # uncomment if you don't use Cypress cloud recording
+          # group: 'CI run'      # optional
