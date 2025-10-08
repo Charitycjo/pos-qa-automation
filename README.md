@@ -18,7 +18,7 @@ Configuration: Environment variables for credentials
 
 Additional Features: Custom Cypress Commands for login reusability
 
-saucedemo-automation/
+#saucedemo-automation/
 │
 ├── cypress/
 │   ├── e2e/
